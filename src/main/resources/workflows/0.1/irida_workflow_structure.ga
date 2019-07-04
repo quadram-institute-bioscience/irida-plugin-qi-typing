@@ -1,0 +1,541 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "qi-typing",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequence_reads_paired"
+                }
+            ],
+            "label": "sequence_reads_paired",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "left": 122,
+                "top": 259
+            },
+            "tool_id": null,
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "50e66064-f444-4c6d-9daa-808c5aeba6a0",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "output",
+                    "uuid": "98289522-8bbd-4fc5-b41a-464091dee30b"
+                }
+            ]
+        },
+        "1": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2",
+            "errors": null,
+            "id": 1,
+            "input_connections": {
+                "library|input1": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ARIBA run",
+                    "name": "library"
+                }
+            ],
+            "label": null,
+            "name": "ARIBA run",
+            "outputs": [
+                {
+                    "name": "report",
+                    "type": "tabular"
+                },
+                {
+                    "name": "assembled_genes",
+                    "type": "fasta"
+                },
+                {
+                    "name": "assembled_seqs",
+                    "type": "fasta"
+                },
+                {
+                    "name": "assemblies",
+                    "type": "fasta"
+                },
+                {
+                    "name": "log_cluster",
+                    "type": "gz"
+                },
+                {
+                    "name": "tools_version",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 552.5,
+                "top": 200
+            },
+            "post_job_actions": {
+                "HideDatasetActionassembled_genes": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assembled_genes"
+                },
+                "HideDatasetActionassembled_seqs": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assembled_seqs"
+                },
+                "HideDatasetActionassemblies": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assemblies"
+                },
+                "HideDatasetActionlog_cluster": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log_cluster"
+                },
+                "HideDatasetActionreport": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "report"
+                },
+                "HideDatasetActiontools_version": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tools_version"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2",
+            "tool_shed_repository": {
+                "changeset_revision": "6b44bd3c8ebc",
+                "name": "ariba",
+                "owner": "thanhlv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"ariba_databases\": \"\\\"card\\\"\", \"adv_assembly\": \"{\\\"adv_assembler\\\": {\\\"__current_case__\\\": 0, \\\"assembler\\\": \\\"spades\\\", \\\"spades_mode\\\": \\\"wgs\\\", \\\"spades_options\\\": \\\"none\\\"}, \\\"assembly_cov\\\": \\\"50\\\", \\\"min_scaff_depth\\\": \\\"10\\\"}\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\", \"adv_nucmer\": \"{\\\"nucmer_breaklen\\\": \\\"200\\\", \\\"nucmer_min_id\\\": \\\"90\\\", \\\"nucmer_min_len\\\": \\\"20\\\"}\", \"adv_other\": \"{\\\"assembled_threshold\\\": \\\"0.95\\\", \\\"force\\\": \\\"true\\\", \\\"gene_nt_extend\\\": \\\"30\\\", \\\"noclean\\\": \\\"false\\\", \\\"threads\\\": \\\"1\\\", \\\"unique_threshold\\\": \\\"0.03\\\", \\\"verbose\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.13.2",
+            "type": "tool",
+            "uuid": "36a3395e-3e3f-4cb5-a87d-6d7d7b4e3719",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "library|input1": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ARIBA run",
+                    "name": "library"
+                }
+            ],
+            "label": null,
+            "name": "ARIBA run",
+            "outputs": [
+                {
+                    "name": "report",
+                    "type": "tabular"
+                },
+                {
+                    "name": "assembled_genes",
+                    "type": "fasta"
+                },
+                {
+                    "name": "assembled_seqs",
+                    "type": "fasta"
+                },
+                {
+                    "name": "assemblies",
+                    "type": "fasta"
+                },
+                {
+                    "name": "log_cluster",
+                    "type": "gz"
+                },
+                {
+                    "name": "tools_version",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 556.5,
+                "top": 487
+            },
+            "post_job_actions": {
+                "HideDatasetActionassembled_genes": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assembled_genes"
+                },
+                "HideDatasetActionassembled_seqs": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assembled_seqs"
+                },
+                "HideDatasetActionassemblies": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assemblies"
+                },
+                "HideDatasetActionlog_cluster": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log_cluster"
+                },
+                "HideDatasetActionreport": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "report"
+                },
+                "HideDatasetActiontools_version": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tools_version"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2",
+            "tool_shed_repository": {
+                "changeset_revision": "6b44bd3c8ebc",
+                "name": "ariba",
+                "owner": "thanhlv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"ariba_databases\": \"\\\"resfinder\\\"\", \"adv_assembly\": \"{\\\"adv_assembler\\\": {\\\"__current_case__\\\": 0, \\\"assembler\\\": \\\"spades\\\", \\\"spades_mode\\\": \\\"wgs\\\", \\\"spades_options\\\": \\\"none\\\"}, \\\"assembly_cov\\\": \\\"50\\\", \\\"min_scaff_depth\\\": \\\"10\\\"}\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\", \"adv_nucmer\": \"{\\\"nucmer_breaklen\\\": \\\"200\\\", \\\"nucmer_min_id\\\": \\\"90\\\", \\\"nucmer_min_len\\\": \\\"20\\\"}\", \"adv_other\": \"{\\\"assembled_threshold\\\": \\\"0.95\\\", \\\"force\\\": \\\"true\\\", \\\"gene_nt_extend\\\": \\\"30\\\", \\\"noclean\\\": \\\"false\\\", \\\"threads\\\": \\\"1\\\", \\\"unique_threshold\\\": \\\"0.03\\\", \\\"verbose\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.13.2",
+            "type": "tool",
+            "uuid": "17dce06d-a1a3-4321-b346-c014a3533ee5",
+            "workflow_outputs": []
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "library|input1": {
+                    "id": 0,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ARIBA run",
+                    "name": "library"
+                }
+            ],
+            "label": null,
+            "name": "ARIBA run",
+            "outputs": [
+                {
+                    "name": "report",
+                    "type": "tabular"
+                },
+                {
+                    "name": "assembled_genes",
+                    "type": "fasta"
+                },
+                {
+                    "name": "assembled_seqs",
+                    "type": "fasta"
+                },
+                {
+                    "name": "assemblies",
+                    "type": "fasta"
+                },
+                {
+                    "name": "log_cluster",
+                    "type": "gz"
+                },
+                {
+                    "name": "tools_version",
+                    "type": "txt"
+                }
+            ],
+            "position": {
+                "left": 567.5,
+                "top": 780
+            },
+            "post_job_actions": {
+                "HideDatasetActionassembled_genes": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assembled_genes"
+                },
+                "HideDatasetActionassembled_seqs": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assembled_seqs"
+                },
+                "HideDatasetActionassemblies": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "assemblies"
+                },
+                "HideDatasetActionlog_cluster": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log_cluster"
+                },
+                "HideDatasetActionreport": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "report"
+                },
+                "HideDatasetActiontools_version": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "tools_version"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2",
+            "tool_shed_repository": {
+                "changeset_revision": "6b44bd3c8ebc",
+                "name": "ariba",
+                "owner": "thanhlv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"ariba_databases\": \"\\\"virulencefinder\\\"\", \"adv_assembly\": \"{\\\"adv_assembler\\\": {\\\"__current_case__\\\": 0, \\\"assembler\\\": \\\"spades\\\", \\\"spades_mode\\\": \\\"wgs\\\", \\\"spades_options\\\": \\\"none\\\"}, \\\"assembly_cov\\\": \\\"50\\\", \\\"min_scaff_depth\\\": \\\"10\\\"}\", \"library\": \"{\\\"__current_case__\\\": 1, \\\"input1\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"lib_type\\\": \\\"collection\\\"}\", \"adv_nucmer\": \"{\\\"nucmer_breaklen\\\": \\\"200\\\", \\\"nucmer_min_id\\\": \\\"90\\\", \\\"nucmer_min_len\\\": \\\"20\\\"}\", \"adv_other\": \"{\\\"assembled_threshold\\\": \\\"0.95\\\", \\\"force\\\": \\\"true\\\", \\\"gene_nt_extend\\\": \\\"30\\\", \\\"noclean\\\": \\\"false\\\", \\\"threads\\\": \\\"1\\\", \\\"unique_threshold\\\": \\\"0.03\\\", \\\"verbose\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null}",
+            "tool_version": "2.13.2",
+            "type": "tool",
+            "uuid": "a175c638-673d-4b89-9a95-03b19554426a",
+            "workflow_outputs": []
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_sum/2.13.2",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "ariba_reports": {
+                    "id": 1,
+                    "output_name": "report"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "ARIBA summary",
+            "outputs": [
+                {
+                    "name": "log",
+                    "type": "tabular"
+                },
+                {
+                    "name": "summary_csv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "phandango_csv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "phandango_tree",
+                    "type": "text"
+                }
+            ],
+            "position": {
+                "left": 874.5,
+                "top": 188
+            },
+            "post_job_actions": {
+                "HideDatasetActionlog": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log"
+                },
+                "HideDatasetActionphandango_tree": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "phandango_tree"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_sum/2.13.2",
+            "tool_shed_repository": {
+                "changeset_revision": "6b44bd3c8ebc",
+                "name": "ariba",
+                "owner": "thanhlv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"ariba_reports\": \"{\\\"values\\\": [{\\\"id\\\": 769631, \\\"src\\\": \\\"hda\\\"}]}\", \"options\": \"{\\\"min_id\\\": \\\"90\\\", \\\"no_tree\\\": \\\"false\\\", \\\"preset\\\": \\\"minimal\\\"}\"}",
+            "tool_version": "2.13.2",
+            "type": "tool",
+            "uuid": "06c30980-eb28-4609-b4c4-181ae1b1425f",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "phandango_csv",
+                    "uuid": "f0d19b28-1d36-499e-9173-cf5bbfec2b35"
+                },
+                {
+                    "label": null,
+                    "output_name": "summary_csv",
+                    "uuid": "99c5db6c-a75e-42f4-84f1-c1ff92b8b7c4"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_sum/2.13.2",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "ariba_reports": {
+                    "id": 2,
+                    "output_name": "report"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "ARIBA summary",
+            "outputs": [
+                {
+                    "name": "log",
+                    "type": "tabular"
+                },
+                {
+                    "name": "summary_csv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "phandango_csv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "phandango_tree",
+                    "type": "text"
+                }
+            ],
+            "position": {
+                "left": 903.5,
+                "top": 445
+            },
+            "post_job_actions": {
+                "HideDatasetActionlog": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_sum/2.13.2",
+            "tool_shed_repository": {
+                "changeset_revision": "6b44bd3c8ebc",
+                "name": "ariba",
+                "owner": "thanhlv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"ariba_reports\": \"{\\\"values\\\": [{\\\"id\\\": 769631, \\\"src\\\": \\\"hda\\\"}]}\", \"options\": \"{\\\"min_id\\\": \\\"90\\\", \\\"no_tree\\\": \\\"false\\\", \\\"preset\\\": \\\"minimal\\\"}\"}",
+            "tool_version": "2.13.2",
+            "type": "tool",
+            "uuid": "3ade4936-84be-49cd-b2e1-4ce6f4fd7f68",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "phandango_csv",
+                    "uuid": "295dc2e5-6d1d-4924-adfd-5d67eec335f1"
+                },
+                {
+                    "label": null,
+                    "output_name": "phandango_tree",
+                    "uuid": "c3849eb9-c102-4b90-84ed-bc640450d786"
+                },
+                {
+                    "label": null,
+                    "output_name": "summary_csv",
+                    "uuid": "d23d44fa-af95-4bac-ac01-68510f519250"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_sum/2.13.2",
+            "errors": null,
+            "id": 6,
+            "input_connections": {
+                "ariba_reports": {
+                    "id": 3,
+                    "output_name": "report"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "ARIBA summary",
+            "outputs": [
+                {
+                    "name": "log",
+                    "type": "tabular"
+                },
+                {
+                    "name": "summary_csv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "phandango_csv",
+                    "type": "tabular"
+                },
+                {
+                    "name": "phandango_tree",
+                    "type": "text"
+                }
+            ],
+            "position": {
+                "left": 892.5,
+                "top": 805
+            },
+            "post_job_actions": {
+                "HideDatasetActionlog": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "log"
+                }
+            },
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_sum/2.13.2",
+            "tool_shed_repository": {
+                "changeset_revision": "6b44bd3c8ebc",
+                "name": "ariba",
+                "owner": "thanhlv",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"ariba_reports\": \"{\\\"values\\\": [{\\\"id\\\": 769631, \\\"src\\\": \\\"hda\\\"}]}\", \"options\": \"{\\\"min_id\\\": \\\"90\\\", \\\"no_tree\\\": \\\"false\\\", \\\"preset\\\": \\\"minimal\\\"}\"}",
+            "tool_version": "2.13.2",
+            "type": "tool",
+            "uuid": "b972c730-cb84-4ff0-9c4c-88aa5e857dd0",
+            "workflow_outputs": [
+                {
+                    "label": null,
+                    "output_name": "phandango_csv",
+                    "uuid": "84bed779-aceb-4aae-9f80-4672d6d58887"
+                },
+                {
+                    "label": null,
+                    "output_name": "phandango_tree",
+                    "uuid": "96082977-3ec1-4143-bace-2cbc681c632a"
+                },
+                {
+                    "label": null,
+                    "output_name": "summary_csv",
+                    "uuid": "c3a2df61-4695-4da8-a178-cc36f1565a6b"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "f0688e0b-0319-457d-b72f-e09a2cbe3f9e",
+    "version": 3
+}

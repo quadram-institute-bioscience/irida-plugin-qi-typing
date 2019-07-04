@@ -1,0 +1,174 @@
+<iridaWorkflow>
+  <id>4ad8ee74-251d-48b5-8b03-fa1dc656e8e7</id>
+  <name>QITyping</name>
+  <version>0.1</version>
+  <analysisType>QI_TYPING</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>false</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter defaultValue="collection" name="ariba-1-library.lib_type">
+      <toolParameter parameterName="library.lib_type" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="90" name="ariba-1-adv_nucmer.nucmer_min_id">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_id" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="200" name="ariba-1-adv_nucmer.nucmer_breaklen">
+      <toolParameter parameterName="adv_nucmer.nucmer_breaklen" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="spades" name="ariba-1-adv_assembly.adv_assembler.assembler">
+      <toolParameter parameterName="adv_assembly.adv_assembler.assembler" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.95" name="ariba-1-adv_other.assembled_threshold">
+      <toolParameter parameterName="adv_other.assembled_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.03" name="ariba-1-adv_other.unique_threshold">
+      <toolParameter parameterName="adv_other.unique_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="wgs" name="ariba-1-adv_assembly.adv_assembler.spades_mode">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_mode" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="1" name="ariba-1-adv_other.threads">
+      <toolParameter parameterName="adv_other.threads" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="true" name="ariba-1-adv_other.force">
+      <toolParameter parameterName="adv_other.force" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="10" name="ariba-1-adv_assembly.min_scaff_depth">
+      <toolParameter parameterName="adv_assembly.min_scaff_depth" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-1-adv_other.verbose">
+      <toolParameter parameterName="adv_other.verbose" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="50" name="ariba-1-adv_assembly.assembly_cov">
+      <toolParameter parameterName="adv_assembly.assembly_cov" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-1-adv_other.noclean">
+      <toolParameter parameterName="adv_other.noclean" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="none" name="ariba-1-adv_assembly.adv_assembler.spades_options">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_options" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="card" name="ariba-1-ariba_databases">
+      <toolParameter parameterName="ariba_databases" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="20" name="ariba-1-adv_nucmer.nucmer_min_len">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_len" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="30" name="ariba-1-adv_other.gene_nt_extend">
+      <toolParameter parameterName="adv_other.gene_nt_extend" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="collection" name="ariba-2-library.lib_type">
+      <toolParameter parameterName="library.lib_type" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="90" name="ariba-2-adv_nucmer.nucmer_min_id">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_id" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="200" name="ariba-2-adv_nucmer.nucmer_breaklen">
+      <toolParameter parameterName="adv_nucmer.nucmer_breaklen" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="spades" name="ariba-2-adv_assembly.adv_assembler.assembler">
+      <toolParameter parameterName="adv_assembly.adv_assembler.assembler" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.95" name="ariba-2-adv_other.assembled_threshold">
+      <toolParameter parameterName="adv_other.assembled_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.03" name="ariba-2-adv_other.unique_threshold">
+      <toolParameter parameterName="adv_other.unique_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="wgs" name="ariba-2-adv_assembly.adv_assembler.spades_mode">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_mode" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="1" name="ariba-2-adv_other.threads">
+      <toolParameter parameterName="adv_other.threads" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="true" name="ariba-2-adv_other.force">
+      <toolParameter parameterName="adv_other.force" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="10" name="ariba-2-adv_assembly.min_scaff_depth">
+      <toolParameter parameterName="adv_assembly.min_scaff_depth" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-2-adv_other.verbose">
+      <toolParameter parameterName="adv_other.verbose" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="50" name="ariba-2-adv_assembly.assembly_cov">
+      <toolParameter parameterName="adv_assembly.assembly_cov" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-2-adv_other.noclean">
+      <toolParameter parameterName="adv_other.noclean" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="none" name="ariba-2-adv_assembly.adv_assembler.spades_options">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_options" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="resfinder" name="ariba-2-ariba_databases">
+      <toolParameter parameterName="ariba_databases" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="20" name="ariba-2-adv_nucmer.nucmer_min_len">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_len" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="30" name="ariba-2-adv_other.gene_nt_extend">
+      <toolParameter parameterName="adv_other.gene_nt_extend" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="collection" name="ariba-3-library.lib_type">
+      <toolParameter parameterName="library.lib_type" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="90" name="ariba-3-adv_nucmer.nucmer_min_id">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_id" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="200" name="ariba-3-adv_nucmer.nucmer_breaklen">
+      <toolParameter parameterName="adv_nucmer.nucmer_breaklen" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="spades" name="ariba-3-adv_assembly.adv_assembler.assembler">
+      <toolParameter parameterName="adv_assembly.adv_assembler.assembler" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.95" name="ariba-3-adv_other.assembled_threshold">
+      <toolParameter parameterName="adv_other.assembled_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="0.03" name="ariba-3-adv_other.unique_threshold">
+      <toolParameter parameterName="adv_other.unique_threshold" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="wgs" name="ariba-3-adv_assembly.adv_assembler.spades_mode">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_mode" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="1" name="ariba-3-adv_other.threads">
+      <toolParameter parameterName="adv_other.threads" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="true" name="ariba-3-adv_other.force">
+      <toolParameter parameterName="adv_other.force" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="10" name="ariba-3-adv_assembly.min_scaff_depth">
+      <toolParameter parameterName="adv_assembly.min_scaff_depth" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-3-adv_other.verbose">
+      <toolParameter parameterName="adv_other.verbose" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="50" name="ariba-3-adv_assembly.assembly_cov">
+      <toolParameter parameterName="adv_assembly.assembly_cov" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="false" name="ariba-3-adv_other.noclean">
+      <toolParameter parameterName="adv_other.noclean" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="none" name="ariba-3-adv_assembly.adv_assembler.spades_options">
+      <toolParameter parameterName="adv_assembly.adv_assembler.spades_options" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="virulencefinder" name="ariba-3-ariba_databases">
+      <toolParameter parameterName="ariba_databases" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="20" name="ariba-3-adv_nucmer.nucmer_min_len">
+      <toolParameter parameterName="adv_nucmer.nucmer_min_len" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+    <parameter defaultValue="30" name="ariba-3-adv_other.gene_nt_extend">
+      <toolParameter parameterName="adv_other.gene_nt_extend" toolId="testtoolshed.g2.bx.psu.edu/repos/thanhlv/ariba/ariba_run/2.13.2" />
+    </parameter>
+  </parameters>
+  <outputs />
+  <toolRepositories>
+    <repository>
+      <name>ariba</name>
+      <owner>thanhlv</owner>
+      <url>https://testtoolshed.g2.bx.psu.edu</url>
+      <revision>6b44bd3c8ebc</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>
