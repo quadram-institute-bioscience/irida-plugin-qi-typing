@@ -51,15 +51,8 @@ Once complete, you should end up with a file `target/example-plugin-1.0-SNAPSHOT
 
 If you have previously [setup IRIDA][irida-setup] before you may copy this JAR file to `/etc/irida/plugins` and restart IRIDA.  The plugin should now show up in the **Analyses > Pipelines** section of IRIDA.
 
-![example-plugin-pipeline.png][]  
-
 You should be able to run a pipeline with this plugin and get analysis results.
-
-![example-plugin-results.png][]
-
 And, you should be able to save and view these results in the IRIDA metadata table.
-
-![example-plugin-metadata.png][]
 
 # Dependencies
 
