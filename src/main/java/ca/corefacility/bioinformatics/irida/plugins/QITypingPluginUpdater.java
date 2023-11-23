@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import com.google.common.collect.ImmutableMap;
 
@@ -117,14 +118,10 @@ public class QITypingPluginUpdater implements AnalysisSampleUpdater {
 			String key = workflowName + "/readCount (v" + workflowVersion + ")";
 			metadataEntries.put(key, readCountEntry);
 
-			Map<MetadataTemplateField, MetadataEntry> metadataMap = metadataTemplateService
-					.getMetadataMap(metadataEntries);
+			Set<MetadataEntry> metadataSet = metadataTemplateService.convertMetadataStringsToSet(metadataEntries);
 
-			// merges with existing sample metadata
-			sample.mergeMetadata(metadataMap);
-
-			// does an update of the sample metadata
-			sampleService.updateFields(sample.getId(), ImmutableMap.of("metadata", sample.getMetadata()));
+			// merges with existing sample metadata and does an update of the sample metadata
+			sampleService.mergeSampleMetadata(sample,metadataSet);
 		} catch (IOException e) {
 			throw new PostProcessingException("Error parsing hash file", e);
 		} catch (IridaWorkflowNotFoundException e) {
